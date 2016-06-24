@@ -114,7 +114,7 @@ HTMLTableElement.prototype.addRow = function (title, html) {
     // Higlight result by changing td background.
     $td.highlightResult();
 
-    return this;
+    return $tr;
 }
 
 HTMLTableCellElement.prototype.highlightResult = function () {
@@ -158,13 +158,17 @@ window.onload = function () {
     } else {
         addInfoMessage();
 
-        getJSON('media-list.json', function (response) {
+        getJSON('./media-list.json', function (response) {
             response.every(function (item, idx) {
                 var name = item.name;
                 var mime = item.details.mime;
                 var codecs = item.details.codecs;
 
-                $table.addRow(name, hasSupport(mime, codecs));
+                // Render table row with data.
+                var $tr = $table.addRow(name, hasSupport(mime, codecs));
+
+                // Add `title` attribute to add tooltip with extra info.
+                $tr.title = (mime+';codecs=' + codecs);
             });
         });
     }
