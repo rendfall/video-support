@@ -2,6 +2,23 @@
 var $v = document.createElement('video');
 var $content = document.getElementById('content');
 
+// Helper - get JSON file
+function getJSON(url, cb) {
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            var response = JSON.parse(xhr.responseText);
+            if (typeof cb === 'function') {
+                cb(response);
+            }
+        }
+    };
+
+    xhr.open('GET', url, true);
+    xhr.send();
+}
+
 // Helper - do support test on video tag
 function hasSupport(type, codecs) {
     codecs = codecs || '';
@@ -68,6 +85,18 @@ function addClearUrlLink() {
     $content.appendChild($a);
 }
 
+// Polyfill - loop through array
+Array.prototype.every = function (cb, context) {
+    if (typeof cb !== 'function') {
+        throw new TypeError(cb + ' is not a function!');
+    }
+
+    var len = this.length;
+    for (var i = 0; i < len; i += 1) {
+        cb.call(context, this[i], i, this);
+    }
+}
+
 // Helper - print text/html by adding row in table.
 HTMLTableElement.prototype.addRow = function (title, html) {
     var $tbody = this.querySelector('tbody') || document.createElement('tbody');
@@ -110,13 +139,6 @@ HTMLTableCellElement.prototype.highlightResult = function () {
     this.style.background = colorsMap[text];
 }
 
-var VIDEO_TYPES = {
-    mpeg4: 'video/mp4',
-    ogg: 'video/ogg',
-    webm: 'video/webm',
-    hls: 'application/x-mpegURL'
-};
-
 // Print results.
 window.onload = function () {
     var $table = buildTable();
@@ -138,14 +160,15 @@ window.onload = function () {
     } else {
         addInfoMessage();
 
-        $table
-            .addRow('mpeg4', hasSupport(VIDEO_TYPES['mpeg4'], 'mp4v.20.8'))
-            .addRow('mpeg4 (h264)', hasSupport(VIDEO_TYPES['mpeg4'], 'avc1.42E01E, mp4a.40.2'))
-            .addRow('ogg', hasSupport(VIDEO_TYPES['ogg'], 'theora'))
-            .addRow('webm', hasSupport(VIDEO_TYPES['webm'], 'vorbis'))
-            .addRow('webm (vp9)', hasSupport(VIDEO_TYPES['webm'], 'v9'))
-            .addRow('hls', hasSupport(VIDEO_TYPES['hls'], 'avc1.42E01E'))
-        ;//END
+        getJSON('media-list.json', function (response) {
+            response.every(function (item, idx) {
+                var name = item.name;
+                var mime = item.details.mime;
+                var codecs = item.details.codecs;
+
+                $table.addRow(name, hasSupport(mime, codecs));
+            });
+        });
     }
 
     $content.appendChild($table);

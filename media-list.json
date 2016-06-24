@@ -1,0 +1,251 @@
+[
+    {
+        "name": "mp4 (avc1.42E01E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.42E01E, mp4a.40.2",
+            "desc": "H.264 Constrained baseline profile video (main and extended video compatible) level 3 and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 - no audio (avc1.42E01E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.42E01E",
+            "desc": "H.264 Constrained baseline profile video (main and extended video compatible) level 3 in MP4 container"
+        }
+    }, {
+        "name": "mp4 (avc1.58A01E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.58A01E, mp4a.40.2",
+            "desc": "H.264 Extended profile video (baseline-compatible) level 3 and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 - no audio (avc1.58A01E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.58A01E",
+            "desc": "H.264 Extended profile video (baseline-compatible) level 3 in MP4 container"
+        }
+    }, {
+        "name": "mp4 (avc1.4D401E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.4D401E, mp4a.40.2",
+            "desc": "H.264 Main profile video level 3 and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 - no audio (avc1.4D401E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.4D401E",
+            "desc": "H.264 Main profile video level 3 in MP4 container"
+        }
+    }, {
+        "name": "mp4 (avc1.64001E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.64001E, mp4a.40.2",
+            "desc": "H.264 'High' profile video (incompatible with main, baseline, or extended profiles) level 3 and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 - no audio (avc1.64001E)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "avc1.64001E",
+            "desc": "H.264 'High' profile video (incompatible with main, baseline, or extended profiles) level 3 in MP4 container"
+        }
+    }, {
+        "name": "mp4 (mp4v.20.8)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "mp4v.20.8, mp4a.40.2",
+            "desc": "MPEG-4 Visual Simple Profile Level 0 video"
+        }
+    }, {
+        "name": "mp4 - no audio (mp4v.20.8)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "mp4v.20.8",
+            "desc": "MPEG-4 Visual Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 (mp4v.20.240)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "mp4v.20.240, mp4a.40.2",
+            "desc": "MPEG-4 Advanced Simple Profile Level 0 video and Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp4 - no audio (mp4v.20.240)",
+        "details": {
+            "extension": "mp4",
+            "mime": "video/mp4",
+            "codecs": "mp4v.20.240",
+            "desc": "MPEG-4 Advanced Simple Profile Level 0 video in MP4 container"
+        }
+    }, {
+        "name": "webm (vp8)",
+        "details": {
+            "extension": "webm",
+            "mime": "video/webm",
+            "codecs": "vp8, vorbis",
+            "desc": "WebM video and Vorbis audio in Webm container"
+        }
+    }, {
+        "name": "webm - no audio (vp8)",
+        "details": {
+            "extension": "webm",
+            "mime": "video/webm",
+            "codecs": "vp8",
+            "desc": "WebM video in Webm container"
+        }
+    }, {
+        "name": "ogg (theora)",
+        "details": {
+            "extension": "ogv",
+            "mime": "video/ogg",
+            "codecs": "theora, vorbis",
+            "desc": "Theora video and Vorbis audio in Ogg container"
+        }
+    }, {
+        "name": "ogg - no audio (theora)",
+        "details": {
+            "extension": "ogv",
+            "mime": "video/ogg",
+            "codecs": "theora",
+            "desc": "Theora video in Ogg container"
+        }
+    }, {
+        "name": "ogg (speex)",
+        "details": {
+            "extension": "ogv",
+            "mime": "video/ogg",
+            "codecs": "theora, speex",
+            "desc": "Theora video and Speex audio in Ogg container"
+        }
+    }, {
+        "name": "ogg (dirac)",
+        "details": {
+            "extension": "ogv",
+            "mime": "video/ogg",
+            "codecs": "dirac, vorbis",
+            "desc": "Dirac video and Vorbis audio in Ogg container"
+        }
+    }, {
+        "name": "ogg - no audio (dirac)",
+        "details": {
+            "extension": "ogv",
+            "mime": "video/ogg",
+            "codecs": "dirac",
+            "desc": "Dirac video in Ogg container"
+        }
+    }, {
+        "name": "3gpp (mp4v.20.8)",
+        "details": {
+            "extension": "3gpp",
+            "mime": "video/3gpp",
+            "codecs": "mp4v.20.8, samr",
+            "desc": "MPEG-4 Visual Simple Profile Level 0 video and AMR audio in 3GPP container"
+        }
+    }, {
+        "name": "3gpp - no audio (mp4v.20.8)",
+        "details": {
+            "extension": "3gpp",
+            "mime": "video/3gpp",
+            "codecs": "mp4v.20.8",
+            "desc": "MPEG-4 Visual Simple Profile Level 0 video in 3GPP container"
+        }
+    }, {
+        "name": "mkv (theora, vorbis)",
+        "details": {
+            "extension": "mkv",
+            "mime": "video/x-matroska",
+            "codecs": "theora, vorbis",
+            "desc": "Theora video and Vorbis audio in Matroska container"
+        }
+    }, {
+        "name": "mkv - no audio (theora)",
+        "details": {
+            "extension": "mkv",
+            "mime": "video/x-matroska",
+            "codecs": "theora, vorbis",
+            "desc": "Theora video in Matroska container"
+        }
+    }, {
+        "name": "mp4 - only audio",
+        "details": {
+            "extension": "mp4",
+            "mime": "audio/mp4",
+            "codecs": "mp4a.40.2",
+            "desc": "Low-Complexity AAC audio in MP4 container"
+        }
+    }, {
+        "name": "mp3 - only audio",
+        "details": {
+            "extension": "mp3",
+            "mime": "audio/mpeg",
+            "codecs": "",
+            "desc": "MPEG Audio Layer 3 audio"
+        }
+    }, {
+        "name": "webm - only audio",
+        "details": {
+            "extension": "webm",
+            "mime": "audio/webm",
+            "codecs": "vorbis",
+            "desc": "Vorbis audio in Webm container"
+        }
+    }, {
+        "name": "ogg - only audio",
+        "details": {
+            "extension": "oga",
+            "mime": "audio/ogg",
+            "codecs": "vorbis",
+            "desc": "Vorbis audio in Ogg container"
+        }
+    }, {
+        "name": "wav - only audio",
+        "details": {
+            "extension": "wav",
+            "mime": "audio/wav",
+            "codecs": "1",
+            "desc": "PCM audio in Waveform Audio File Format (WAVE) container"
+        }
+    }, {
+        "name": "ogg - only audio (speex)",
+        "details": {
+            "extension": "spx",
+            "mime": "audio/ogg",
+            "codecs": "speex",
+            "desc": "Speex audio in Ogg container"
+        }
+    }, {
+        "name": "ogg - only audio (flac)",
+        "details": {
+            "extension": "oga",
+            "mime": "audio/ogg",
+            "codecs": "flac",
+            "desc": "FLAC audio in Ogg container"
+        }
+    }, {
+        "name": "3gp - only audio",
+        "details": {
+            "extension": "3gp",
+            "mime": "audio/3gpp",
+            "codecs": "samr",
+            "desc": "AMR audio in 3GPP container"
+        }
+    }
+]
