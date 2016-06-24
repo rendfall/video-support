@@ -20,10 +20,8 @@ function getJSON(url, cb) {
 }
 
 // Helper - do support test on video tag
-function hasSupport(type, codecs) {
-    codecs = codecs || '';
-    var q = [type, codecs].join(';');
-
+function hasSupport(mime, codecs) {
+    var q = mime +';codecs="' + codecs + '"';
     return $v.canPlayType(q);
 }
 
