@@ -168,7 +168,10 @@ window.onload = function () {
                 var $tr = $table.addRow(name, hasSupport(mime, codecs));
 
                 // Add `title` attribute to add tooltip with extra info.
-                $tr.title = (mime+';codecs=' + codecs);
+                $tr.title = [
+                    'mime="' + mime + '";',
+                    'codecs="' + codecs + '"'
+                ].join(' ');
             });
         });
     }
